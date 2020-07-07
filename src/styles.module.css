@@ -1,0 +1,35 @@
+/* add css styles here (optional) */
+
+.react-toc {
+  margin: auto;
+  padding: 30px;
+  width: 70%;
+}
+
+.react-toc > li,
+.react-toc > ul > li,
+.react-toc > ul > ul > li,
+.react-toc > ul > ul > ul > li,
+.react-toc > ul > ul > ul > ul > li,
+.react-toc > ul > ul > ul > ul > ul > li {
+  padding-bottom: 10px;
+}
+
+.react-toc > li > a,
+.react-toc > ul > li > a,
+.react-toc > ul > ul > li > a,
+.react-toc > ul > ul > ul > li > a,
+.react-toc > ul > ul > ul > ul > li > a,
+.react-toc > ul > ul > ul > ul > ul > li > a {
+  color: #dc014e;
+  text-decoration: none;
+}
+
+.react-toc > li > a:hover,
+.react-toc > ul > li > a:hover,
+.react-toc > ul > ul > li > a:hover,
+.react-toc > ul > ul > ul > li > a:hover,
+.react-toc > ul > ul > ul > ul > li > a:hover,
+.react-toc > ul > ul > ul > ul > ul > li > a:hover {
+  color: #565656;
+}
