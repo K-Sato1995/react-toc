@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`generateList renders in with a heading1 1`] = `
+<li>
+  <a
+    href="#this-is-the-title"
+  >
+    this is the title
+  </a>
+</li>
+`;
+
+exports[`generateList renders in with a heading2 1`] = `
+<ul>
+  <li>
+    <a
+      href="#this-is-the-title"
+    >
+      this is the title
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`generateList renders in with a heading3 1`] = `
+<ul>
+  <ul>
+    <li>
+      <a
+        href="#this-is-the-title"
+      >
+        this is the title
+      </a>
+    </li>
+  </ul>
+</ul>
+`;
+
+exports[`generateList renders in with a heading4 1`] = `
+<ul>
+  <ul>
+    <ul>
+      <li>
+        <a
+          href="#this-is-the-title"
+        >
+          this is the title
+        </a>
+      </li>
+    </ul>
+  </ul>
+</ul>
+`;
+
+exports[`generateList renders in with a heading5 1`] = `
+<ul>
+  <ul>
+    <ul>
+      <ul>
+        <li>
+          <a
+            href="#this-is-the-title"
+          >
+            this is the title
+          </a>
+        </li>
+      </ul>
+    </ul>
+  </ul>
+</ul>
+`;
+
+exports[`generateList renders in with a heading6 1`] = `
+<ul>
+  <ul>
+    <ul>
+      <ul>
+        <ul>
+          <li>
+            <a
+              href="#this-is-the-title"
+            >
+              this is the title
+            </a>
+          </li>
+        </ul>
+      </ul>
+    </ul>
+  </ul>
+</ul>
+`;
+
+exports[`generateList renders the listItem when the given heading's level is over 6 1`] = `
+<li>
+  <a
+    href="#this-is-the-title"
+  >
+    this is the title
+  </a>
+</li>
+`;

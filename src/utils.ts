@@ -1,7 +1,9 @@
+// Removes # and connects each word with '-'.
+// It also replaces !/? with '-'.
 const createLink = (string: string): string => {
   const shapedString = string
     .toLowerCase()
-    .replace(/#+\s/, "")
+    .replace(/^#+\s/, "")
     .trimRight();
   const anchor = shapedString
     .split(" ")
@@ -10,8 +12,9 @@ const createLink = (string: string): string => {
   return anchor;
 };
 
+// It removes # from the given string. And it shortens the string if its longer than "stringLimit".
 const createTitle = (string: string, stringLimit: number) => {
-  const rawTitle = string.replace(/#+\s/g, "");
+  const rawTitle = string.replace(/^#+\s/g, "");
 
   if (rawTitle.length >= stringLimit)
     return `${rawTitle.slice(0, stringLimit)}..`;
@@ -19,10 +22,11 @@ const createTitle = (string: string, stringLimit: number) => {
   return rawTitle;
 };
 
+// It extracts headings from the given markdownText.
 const extractHeadingsFromMd = (
   markdownText: string,
   numberOftargetHeadings: number
-) => {
+): RegExpMatchArray | null => {
   const headingRegex = new RegExp(
     `^#{1,${numberOftargetHeadings}}\\s.+\\n`,
     "gm"
