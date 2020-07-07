@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toc/> renders properly 1`] = `
+<ul>
+  <li>
+    <a
+      href="#heading1"
+    >
+      Heading1
+
+    </a>
+  </li>
+  <ul>
+    <li>
+      <a
+        href="#heading2"
+      >
+        Heading2
+
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>
+        <a
+          href="#heading3"
+        >
+          Heading3
+
+        </a>
+      </li>
+    </ul>
+  </ul>
+</ul>
+`;
+
+exports[`<Toc/> renders properly with className option 1`] = `
+<ul
+  className="customClassName"
+>
+  <li>
+    <a
+      href="#heading1"
+    >
+      Hea..
+    </a>
+  </li>
+  <ul>
+    <li>
+      <a
+        href="#heading2"
+      >
+        Hea..
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>
+        <a
+          href="#heading3"
+        >
+          Hea..
+        </a>
+      </li>
+    </ul>
+  </ul>
+</ul>
+`;
+
+exports[`<Toc/> renders properly with lowestHeadingLevel option 1`] = `
+<ul>
+  <li>
+    <a
+      href="#heading1"
+    >
+      Hea..
+    </a>
+  </li>
+  <ul>
+    <li>
+      <a
+        href="#heading2"
+      >
+        Hea..
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>
+        <a
+          href="#heading3"
+        >
+          Hea..
+        </a>
+      </li>
+    </ul>
+  </ul>
+</ul>
+`;
+
+exports[`<Toc/> renders properly with titleLimit option 1`] = `
+<ul>
+  <li>
+    <a
+      href="#heading1"
+    >
+      Hea..
+    </a>
+  </li>
+  <ul>
+    <li>
+      <a
+        href="#heading2"
+      >
+        Hea..
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>
+        <a
+          href="#heading3"
+        >
+          Hea..
+        </a>
+      </li>
+    </ul>
+  </ul>
+</ul>
+`;
+
+exports[`<Toc/> renders properly with type option 1`] = `
+<ul
+  className="customClassName"
+>
+  <li>
+    <a
+      href="#heading1"
+    >
+      Hea..
+    </a>
+  </li>
+  <ul>
+    <li>
+      <a
+        href="#heading2"
+      >
+        Hea..
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>
+        <a
+          href="#heading3"
+        >
+          Hea..
+        </a>
+      </li>
+    </ul>
+  </ul>
+</ul>
+`;
