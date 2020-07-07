@@ -11,7 +11,7 @@ describe("newHeading", () => {
     expect(createdObject).toEqual({
       level: 2,
       title: "## Test Heading  ",
-      titleLimit: 50
+      titleLimit: 50,
     });
   });
 

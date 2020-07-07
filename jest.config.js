@@ -1,7 +1,7 @@
 module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
-    ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css"
+    ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css",
   },
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   testPathIgnorePatterns: ["/lib/", "/node_modules/", "/dist/"],
@@ -10,11 +10,12 @@ module.exports = {
   coverageThreshold: {
     global: {
       branches: 50,
-      functions: 90,
+      functions: 80,
       lines: 80,
-      statements: 80
-    }
+      statements: 80,
+    },
   },
+  coverageReporters: ["json", "lcovonly", "text", "clover"],
   bail: true,
-  collectCoverage: true
+  collectCoverage: true,
 };
