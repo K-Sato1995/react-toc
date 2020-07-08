@@ -14,13 +14,13 @@ interface Props {
   markdownText: string;
 }
 
-const flatten = (text, child) => {
+const flatten = (text: string, child: any): any => {
   return typeof child === "string"
     ? text + child
     : React.Children.toArray(child.props.children).reduce(flatten, text);
 };
 
-export const HeadingRenderer = props => {
+export const HeadingRenderer = (props: any) => {
   var children = React.Children.toArray(props.children);
   var text = children.reduce(flatten, "");
   var slug = text.toLowerCase().replace(/[!?\s]/g, "-");
@@ -38,7 +38,7 @@ const MainContent = ({ markdownText }: Props) => {
         source={markdownText}
         renderers={{
           code: CodeBlock,
-          heading: HeadingRenderer
+          heading: HeadingRenderer,
         }}
         className="post-content"
       />
