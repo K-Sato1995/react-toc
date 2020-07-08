@@ -1,44 +1,86 @@
 const CONTENT = `
-# React toc's description
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+# Overview
 
-\`\`\`ruby
-puts 'Hello World'
+The idea is that you can automatically create a customizable table of contents from your markdown text.
+
+PRs/Issues are always welcome.
+
+[![Image from Gyazo](https://i.gyazo.com/44ec2b48b429a8ebab4cee66ee60d047.gif)](https://gyazo.com/44ec2b48b429a8ebab4cee66ee60d047)
+
+# Installation
+
+## Install the package with npm
+
+Run the command below.
+
+\`\`\`bash
+npm install --save react-toc
 \`\`\`
 
-## Testing?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+## Install the package with yarn
 
+Run the command below.
 
-### 日本語 _Japanese]~:/?#@!$&()*+,;=
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-
-#### It catchs nested headin
-##### It catchs nested headngs.
-
-###### It catchs nesteddings.
-
-# This is the second heading
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-\`\`\`ts
-const test: string = "This is a string."
-
-console.log(test)
+\`\`\`bash
+yarn add react-toc
 \`\`\`
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+# Usage
 
+Import Toc from the package and pass props to it. As for now, \`markdownText\` is the only required prop.
 
-# Ipsum is simply dummy
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+\`\`\`jsx
+import React from "react";
+import Toc from "react-toc";
 
-# Lorem Ipsum has been the industry's standard dummy text
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+const Example = () => {
+const yourMarkdownText = '# test \n your markdown Content # test2\n'
+return <Toc markdownText={yourMarkdownText} />
+};
 
-# Aldus PageMaker includes versions of Lorem Ipsum.
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`;
+export default Example;
+\`\`\`
+
+# Props
+
+| Name               | Type              | Description                                                                   |
+| ------------------ | ----------------- | ----------------------------------------------------------------------------- |
+| \`markdownText\`       | string            | **Required** The markdown text you want to creat a TOC from.                   |
+| \`titleLimit\`         | number            | The maximum length of each title in the TOC.                                  |
+| \`lowestHeadingLevel\` | number            | The lowest level of headings you want to extract from the given markdownText. |
+| \`className\`          | strig             | Your custom className.                                                        |
+| \`type\`               | "deafult" or"raw" | The type of a TOC you want to use.                                            |
+
+# CustomDesign
+
+## Add a custom className
+
+Pass \`className\` like the code below.
+
+\`\`\`jsx
+import React from "react";
+import Toc from "react-toc";
+
+const Example = () => {
+const yourMarkdownText = '# test \n your markdown Content # test2\n'
+return <Toc markdownText={yourMarkdownText} className={"customClassName"}/>
+};
+
+export default Example;
+\`\`\`
+
+## Style the custom class
+
+Now you can style your custom class just like the code below.
+
+\`\`\`css
+.customClassName  {
+  border: solid 1px;
+}
+.customClassName > li {
+  padding-bottom: 10px;
+}
+\`\`\`
+`;
 
 export { CONTENT };
