@@ -5,8 +5,6 @@ The idea is that you can automatically create a customizable table of contents f
 
 PRs/Issues are always welcome.
 
-[![Image from Gyazo](https://i.gyazo.com/44ec2b48b429a8ebab4cee66ee60d047.gif)](https://gyazo.com/44ec2b48b429a8ebab4cee66ee60d047)
-
 # Installation
 
 ## Install the package with npm

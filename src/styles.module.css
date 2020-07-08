@@ -1,11 +1,5 @@
 /* add css styles here (optional) */
 
-.react-toc {
-  margin: auto;
-  padding: 30px;
-  width: 70%;
-}
-
 .react-toc > li,
 .react-toc > ul > li,
 .react-toc > ul > ul > li,

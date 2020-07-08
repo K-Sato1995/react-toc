@@ -1,14 +1,6 @@
 import React from "react";
-import styled from "styled-components";
-import { Card } from "@material-ui/core";
 import ReactMarkdown from "react-markdown";
 import CodeBlock from "./CodeBlock";
-
-const Content = styled(Card)`
-  width: 70%;
-  padding: 20px;
-  margin: auto;
-`;
 
 interface Props {
   markdownText: string;
@@ -33,7 +25,7 @@ export const HeadingRenderer = (props: any) => {
 
 const MainContent = ({ markdownText }: Props) => {
   return (
-    <Content>
+    <React.Fragment>
       <ReactMarkdown
         source={markdownText}
         renderers={{
@@ -42,7 +34,7 @@ const MainContent = ({ markdownText }: Props) => {
         }}
         className="post-content"
       />
-    </Content>
+    </React.Fragment>
   );
 };
 
