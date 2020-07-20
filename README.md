@@ -1,6 +1,7 @@
 # react-toc
 
 [![NPM](https://img.shields.io/npm/v/react-toc.svg)](https://www.npmjs.com/package/react-toc) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![K-Sato1995](https://circleci.com/gh/K-Sato1995/react-toc.svg?style=svg)](https://app.circleci.com/pipelines/github/K-Sato1995/react-toc?branch=master)
 
 ## Overview
 
