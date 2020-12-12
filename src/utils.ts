@@ -25,10 +25,11 @@ const createTitle = (string: string, stringLimit: number) => {
 // It extracts headings from the given markdownText.
 const extractHeadingsFromMd = (
   markdownText: string,
-  numberOftargetHeadings: number
+  highestTargetHeadings: number,
+  lowestTargetHeadings: number
 ): RegExpMatchArray | null => {
   const headingRegex = new RegExp(
-    `^#{1,${numberOftargetHeadings}}\\s.+\\n`,
+    `^#{${highestTargetHeadings},${lowestTargetHeadings}}\\s.+\\n`,
     "gm"
   );
   return markdownText.match(headingRegex);

@@ -34,7 +34,7 @@ describe("extractHeadingsFromMd", () => {
   `;
 
   it("It extracts headings from the given markdownText.", () => {
-    expect(extractHeadingsFromMd(markdownText, 3)).toEqual([
+    expect(extractHeadingsFromMd(markdownText, 1, 3)).toEqual([
       "# Heading1\n",
       "## Heading2\n",
       "### Heading3\n"
@@ -42,8 +42,21 @@ describe("extractHeadingsFromMd", () => {
   });
 
   it("It extracts headings from the given markdownText.", () => {
-    expect(extractHeadingsFromMd(markdownText, 2)).toEqual([
+    expect(extractHeadingsFromMd(markdownText, 1, 2)).toEqual([
       "# Heading1\n",
+      "## Heading2\n"
+    ]);
+  });
+
+  it("It extracts headings from the given markdownText.", () => {
+    expect(extractHeadingsFromMd(markdownText, 2, 3)).toEqual([
+      "## Heading2\n",
+      "### Heading3\n"
+    ]);
+  });
+
+  it("It extracts headings from the given markdownText.", () => {
+    expect(extractHeadingsFromMd(markdownText, 2, 2)).toEqual([
       "## Heading2\n"
     ]);
   });
