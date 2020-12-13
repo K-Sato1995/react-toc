@@ -13,6 +13,10 @@ interface Props {
   */
   titleLimit?: number;
   /*
+    The highest level of headings you want to extract from the given markdownText.
+  */
+  highestHeadingLevel?: number;
+  /*
     The lowest level of headings you want to extract from the given markdownText.
   */
   lowestHeadingLevel?: number;
@@ -39,6 +43,7 @@ interface Props {
 const Toc = ({
   markdownText,
   titleLimit,
+  highestHeadingLevel,
   lowestHeadingLevel,
   className,
   type
@@ -47,7 +52,7 @@ const Toc = ({
   const limit = titleLimit ? titleLimit : 200;
   const defaultClass = type === "raw" ? "" : "react-toc";
   const customClass = className || defaultClass;
-  const headingLevel: number = lowestHeadingLevel || 6;
+  const headingLevels: number[] = [highestHeadingLevel || 1, lowestHeadingLevel || 6];
 
   // Style settings
   const style: string | undefined = styles[customClass] || className;
@@ -55,7 +60,8 @@ const Toc = ({
   // Mutate headings
   const matchedHeadings: RegExpMatchArray | null = extractHeadingsFromMd(
     markdownText,
-    headingLevel
+    headingLevels[0],
+    headingLevels[1]
   );
   const headingObjects = matchedHeadings?.map(heading =>
     newHeading(heading, limit)
