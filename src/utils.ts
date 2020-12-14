@@ -29,7 +29,7 @@ const extractHeadingsFromMd = (
   lowestTargetHeadings: number
 ): RegExpMatchArray | null => {
   const headingRegex = new RegExp(
-    `^#{${highestTargetHeadings},${lowestTargetHeadings}}\\s.+\\n`,
+    `^#{${highestTargetHeadings},${lowestTargetHeadings}}\\s.+(\\n|\\r|\\r\\n)`,
     "gm"
   );
   return markdownText.match(headingRegex);
