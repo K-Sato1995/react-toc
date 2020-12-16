@@ -1,4 +1,4 @@
-import { createLink, createTitle, extractHeadingsFromMd } from "../utils";
+import { createLink, createTitle, extractHeadingsFromMd, removeCodeBlockFromMd } from "../utils";
 
 describe("createLink", () => {
   it("removes # and connects each word with '-'.", () => {
@@ -59,5 +59,41 @@ describe("extractHeadingsFromMd", () => {
     expect(extractHeadingsFromMd(markdownText, 2, 2)).toEqual([
       "## Heading2\n"
     ]);
+  });
+});
+
+describe("removeCodeBlockFromMd", () => {
+  const markdownText = `
+# Heading1
+  This is the first paragraph.
+## Heading2
+  This is the second paragraph.
+\`\`\`
+### This is typical codeblock
+\`\`\`
+Text between codeblock
+\`\`\`\`
+\`\`\`
+### Escaped codeblock
+\`\`\`
+\`\`\`\`
+Text between codeblock
+~~~
+\`\`\`
+### Escaped codeblock
+\`\`\`
+~~~
+  `;
+
+  it("It removes codeblock from the given markdownText.", () => {
+    expect(removeCodeBlockFromMd(markdownText)).toEqual(`
+# Heading1
+  This is the first paragraph.
+## Heading2
+  This is the second paragraph.
+Text between codeblock
+Text between codeblock
+  `
+    );
   });
 });
