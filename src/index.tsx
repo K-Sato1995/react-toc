@@ -1,6 +1,6 @@
 import * as React from "react";
 import styles from "./styles.module.css";
-import { extractHeadingsFromMd } from "./utils";
+import { extractHeadingsFromMd, removeCodeBlockFromMd } from "./utils";
 import Heading, { newHeading } from "./Heading";
 
 interface Props {
@@ -59,7 +59,7 @@ const Toc = ({
 
   // Mutate headings
   const matchedHeadings: RegExpMatchArray | null = extractHeadingsFromMd(
-    markdownText,
+    removeCodeBlockFromMd(markdownText),
     headingLevels[0],
     headingLevels[1]
   );
