@@ -35,4 +35,11 @@ const extractHeadingsFromMd = (
   return markdownText.match(headingRegex);
 };
 
-export { createLink, createTitle, extractHeadingsFromMd };
+const removeCodeBlockFromMd = (
+  markdownText: string
+): string => {
+  const codeBlockRegex = new RegExp('((````.+?````)|(```.+?```)|(~~~.+?~~~))\n', 'gms');
+  return markdownText.replace(codeBlockRegex, '');
+};
+
+export { createLink, createTitle, extractHeadingsFromMd, removeCodeBlockFromMd };
