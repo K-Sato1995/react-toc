@@ -1,0 +1,15 @@
+{
+  "files.autoSave": "onFocusChange",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+  ],
+  "eslint.workingDirectories": [
+    "./client"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
