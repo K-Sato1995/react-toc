@@ -87,4 +87,4 @@ Now you can style your custom class just like the code below.
 
 ## License
 
-[MIT](https://github.com/K-Sato1995/react-toc/blob/master/LICENCE)
+[MIT](https://github.com/K-Sato1995/react-toc/blob/master/LICENSE)
