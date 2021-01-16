@@ -14,6 +14,13 @@ This is a test sentence.
 `
 
 describe('<Toc/>', () => {
+  it('returns null if the markdownText dose not exist', () => {
+    const component = renderer.create(<Toc markdownText={''} />)
+    const tree = component.toJSON()
+
+    expect(tree).toBe(null)
+  })
+
   it('renders properly', () => {
     const component = renderer.create(<Toc markdownText={markdownText} />)
     const tree = component.toJSON()

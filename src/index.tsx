@@ -48,6 +48,7 @@ const Toc = ({
   className,
   type,
 }: TocProps): JSX.Element | null => {
+  if (!markdownText) return null
   // Set default values
   const limit = titleLimit ? titleLimit : 200
   const defaultClass = type === 'raw' ? '' : 'react-toc'

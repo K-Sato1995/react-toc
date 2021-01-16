@@ -68,9 +68,9 @@ describe('extractHeadingsFromMd', () => {
 describe('removeCodeBlockFromMd', () => {
   const markdownText = `
 # Heading1
-  This is the first paragraph.
+This is the first paragraph.
 ## Heading2
-  This is the second paragraph.
+This is the second paragraph.
 \`\`\`
 ### This is typical codeblock
 \`\`\`
@@ -85,17 +85,18 @@ Text between codeblock
 \`\`\`
 ### Escaped codeblock
 \`\`\`
-~~~
-  `
+~~~`
 
   it('removes codeblock from the given markdownText.', () => {
     expect(removeCodeBlockFromMd(markdownText)).toEqual(`
 # Heading1
-  This is the first paragraph.
+This is the first paragraph.
 ## Heading2
-  This is the second paragraph.
+This is the second paragraph.
+
 Text between codeblock
+
 Text between codeblock
-  `)
+`)
   })
 })
