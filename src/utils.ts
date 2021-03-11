@@ -1,20 +1,17 @@
 // Replaces all the specified letters
-const replaceAll = (retStr: string, renderers: CustomRenderers) => {
-  for (const key in renderers) {
-    retStr = retStr.replace(new RegExp(key, 'g'), renderers[key])
+const replaceAll = (retStr: string, customMatchers: CustomMatchers) => {
+  for (const key in customMatchers) {
+    retStr = retStr.replace(new RegExp(key, 'g'), customMatchers[key])
   }
   return retStr
 }
 
 // Removes # and connects each word with '-'.
 // It also replaces !/? with '-'.
-const createLink = (
-  string: string,
-  customRenderers: CustomRenderers,
-): string => {
+const createLink = (string: string, customMatchers: CustomMatchers): string => {
   const shapedString = string.toLowerCase().replace(/^#+\s/, '').trimRight()
   const anchor = shapedString.split(' ').join('-').replace(/[?!]/g, '-')
-  return replaceAll(anchor, customRenderers)
+  return replaceAll(anchor, customMatchers)
 }
 
 // It removes # from the given string. And it shortens the string if its longer than "stringLimit".

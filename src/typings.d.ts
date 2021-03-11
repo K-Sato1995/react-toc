@@ -14,7 +14,7 @@ declare module "*.svg" {
   export { svgComponent as ReactComponent };
 }
 
-type CustomRenderers  = { [key: string]: string }
+type CustomMatchers  = { [key: string]: string }
 
 interface TocProps {
   /*

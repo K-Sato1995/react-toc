@@ -41,7 +41,7 @@ type TocProps = {
   /*
     The custom options for the anchors
   */
-  customRenderers?: CustomRenderers
+  customMatchers?: CustomMatchers
 }
 
 const Toc = ({
@@ -51,7 +51,7 @@ const Toc = ({
   lowestHeadingLevel,
   className,
   type,
-  customRenderers,
+  customMatchers,
 }: TocProps): JSX.Element | null => {
   if (!markdownText) return null
   // Set default values
@@ -73,7 +73,7 @@ const Toc = ({
     headingLevels[1],
   )
   const headingObjects = matchedHeadings?.map((heading) =>
-    newHeading(heading, limit, customRenderers),
+    newHeading(heading, limit, customMatchers),
   )
   const headingTags:
     | JSX.Element[]
