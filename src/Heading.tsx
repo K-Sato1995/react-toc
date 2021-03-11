@@ -5,17 +5,24 @@ export default class Heading {
   title: string
   level: number
   titleLimit: number
+  renderers: CustomRenderers
 
-  constructor(title: string, level: number, titleLimit: number) {
+  constructor(
+    title: string,
+    level: number,
+    titleLimit: number,
+    renderers?: CustomRenderers,
+  ) {
     this.title = title
     this.level = level
     this.titleLimit = titleLimit
+    this.renderers = renderers ? renderers : {}
   }
 
   generateList(): JSX.Element {
     const listItem = (
       <li>
-        <a href={`#${createLink(this.title)}`}>
+        <a href={`#${createLink(this.title, this.renderers)}`}>
           {createTitle(this.title, this.titleLimit)}
         </a>
       </li>
@@ -31,12 +38,14 @@ export default class Heading {
 const newHeading = (
   headingText: string,
   titleLimit: number,
+  customRenderers?: CustomRenderers,
 ): Heading | null => {
   const matchedHashes = headingText.match(/^#+/)
   if (!matchedHashes) return null
   const headingLevel: number = matchedHashes[0].split('').length
+  const renderers = customRenderers ? customRenderers : {}
 
-  return new Heading(headingText, headingLevel, titleLimit)
+  return new Heading(headingText, headingLevel, titleLimit, renderers)
 }
 
 /* 
