@@ -7,10 +7,10 @@ const replaceAll = (retStr: string, customMatchers: CustomMatchers): string => {
 }
 
 // Removes # and connects each word with '-'.
-const createLink = (string: string, customMatchers: CustomMatchers): string => {
+const createLink = (string: string): string => {
   const shapedString = string.toLowerCase().replace(/^#+\s/, '').trimRight()
   const anchor = shapedString.split(' ').join('-')
-  return replaceAll(anchor, customMatchers)
+  return anchor
 }
 
 // It removes # from the given string. And it shortens the string if its longer than "stringLimit".

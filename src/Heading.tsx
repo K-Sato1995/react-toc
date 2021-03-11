@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { createLink, createTitle } from './utils'
+import { replaceAll, createLink, createTitle } from './utils'
 
 export default class Heading {
   title: string
@@ -20,9 +20,10 @@ export default class Heading {
   }
 
   generateList(): JSX.Element {
+    const link = createLink(this.title)
     const listItem = (
       <li>
-        <a href={`#${createLink(this.title, this.customMatchers)}`}>
+        <a href={`#${replaceAll(link, this.customMatchers)}`}>
           {createTitle(this.title, this.titleLimit)}
         </a>
       </li>
