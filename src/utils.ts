@@ -10,7 +10,7 @@ const replaceAll = (retStr: string, customMatchers: CustomMatchers) => {
 // It also replaces !/? with '-'.
 const createLink = (string: string, customMatchers: CustomMatchers): string => {
   const shapedString = string.toLowerCase().replace(/^#+\s/, '').trimRight()
-  const anchor = shapedString.split(' ').join('-').replace(/[?!]/g, '-')
+  const anchor = shapedString.split(' ').join('-')
   return replaceAll(anchor, customMatchers)
 }
 
