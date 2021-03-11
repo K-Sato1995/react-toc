@@ -7,14 +7,10 @@ import {
 
 describe('createLink', () => {
   it("removes # and connects each word with '-'.", () => {
-    expect(createLink('# Test Heading  ')).toEqual('test-heading')
-    expect(createLink('## This is a test heading')).toEqual(
+    expect(createLink('# Test Heading  ', {})).toEqual('test-heading')
+    expect(createLink('## This is a test heading', {})).toEqual(
       'this-is-a-test-heading',
     )
-  })
-
-  it('replaces /!/? with -', () => {
-    expect(createLink('### Test?')).toEqual('test-')
   })
 })
 

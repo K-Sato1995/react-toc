@@ -12,6 +12,7 @@ describe('newHeading', () => {
       level: 2,
       title: '## Test Heading  ',
       titleLimit: 50,
+      customMatchers: {},
     })
   })
 
