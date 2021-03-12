@@ -3,13 +3,13 @@ import Toc from '../index'
 import renderer from 'react-test-renderer'
 
 const markdownText = `
-# Heading1
+# Heading1!?
 This is a test sentence.
 
-## Heading2
+## Heading2!
 This is a test sentence.
 
-### Heading3
+### Heading3?
 This is a test sentence.
 `
 
@@ -67,6 +67,24 @@ describe('<Toc/>', () => {
         titleLimit={3}
         lowestHeadingLevel={4}
         className={'customClassName'}
+        type="raw"
+      />,
+    )
+    const tree = component.toJSON()
+
+    expect(tree).toMatchSnapshot()
+  })
+
+  it('renders properly with customMatchers option', () => {
+    const customMatchers = {
+      '[?!]': '-',
+    }
+    const component = renderer.create(
+      <Toc
+        markdownText={markdownText}
+        lowestHeadingLevel={4}
+        className={'customClassName'}
+        customMatchers={customMatchers}
         type="raw"
       />,
     )

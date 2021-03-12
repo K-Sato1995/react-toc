@@ -1,8 +1,15 @@
+// Replaces all the specified letters.
+const replaceAll = (retStr: string, customMatchers: CustomMatchers): string => {
+  for (const key in customMatchers) {
+    retStr = retStr.replace(new RegExp(key, 'g'), customMatchers[key])
+  }
+  return retStr
+}
+
 // Removes # and connects each word with '-'.
-// It also replaces !/? with '-'.
 const createLink = (string: string): string => {
   const shapedString = string.toLowerCase().replace(/^#+\s/, '').trimRight()
-  const anchor = shapedString.split(' ').join('-').replace(/[?!]/g, '-')
+  const anchor = shapedString.split(' ').join('-')
   return anchor
 }
 
@@ -37,4 +44,10 @@ const removeCodeBlockFromMd = (markdownText: string): string => {
   return markdownText.replace(codeBlockRegex, '')
 }
 
-export { createLink, createTitle, extractHeadingsFromMd, removeCodeBlockFromMd }
+export {
+  replaceAll,
+  createLink,
+  createTitle,
+  extractHeadingsFromMd,
+  removeCodeBlockFromMd,
+}
