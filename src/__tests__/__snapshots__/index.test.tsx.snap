@@ -6,18 +6,18 @@ exports[`<Toc/> renders properly 1`] = `
 >
   <li>
     <a
-      href="#heading1"
+      href="#heading1!?"
     >
-      Heading1
+      Heading1!?
       
     </a>
   </li>
   <ul>
     <li>
       <a
-        href="#heading2"
+        href="#heading2!"
       >
-        Heading2
+        Heading2!
         
       </a>
     </li>
@@ -26,9 +26,9 @@ exports[`<Toc/> renders properly 1`] = `
     <ul>
       <li>
         <a
-          href="#heading3"
+          href="#heading3?"
         >
-          Heading3
+          Heading3?
           
         </a>
       </li>
@@ -43,7 +43,7 @@ exports[`<Toc/> renders properly with className option 1`] = `
 >
   <li>
     <a
-      href="#heading1"
+      href="#heading1!?"
     >
       Hea..
     </a>
@@ -51,7 +51,7 @@ exports[`<Toc/> renders properly with className option 1`] = `
   <ul>
     <li>
       <a
-        href="#heading2"
+        href="#heading2!"
       >
         Hea..
       </a>
@@ -61,9 +61,46 @@ exports[`<Toc/> renders properly with className option 1`] = `
     <ul>
       <li>
         <a
-          href="#heading3"
+          href="#heading3?"
         >
           Hea..
+        </a>
+      </li>
+    </ul>
+  </ul>
+</ul>
+`;
+
+exports[`<Toc/> renders properly with customMatchers option 1`] = `
+<ul
+  className="customClassName"
+>
+  <li>
+    <a
+      href="#heading1--"
+    >
+      Heading1!?
+      
+    </a>
+  </li>
+  <ul>
+    <li>
+      <a
+        href="#heading2-"
+      >
+        Heading2!
+        
+      </a>
+    </li>
+  </ul>
+  <ul>
+    <ul>
+      <li>
+        <a
+          href="#heading3-"
+        >
+          Heading3?
+          
         </a>
       </li>
     </ul>
@@ -77,7 +114,7 @@ exports[`<Toc/> renders properly with lowestHeadingLevel option 1`] = `
 >
   <li>
     <a
-      href="#heading1"
+      href="#heading1!?"
     >
       Hea..
     </a>
@@ -85,7 +122,7 @@ exports[`<Toc/> renders properly with lowestHeadingLevel option 1`] = `
   <ul>
     <li>
       <a
-        href="#heading2"
+        href="#heading2!"
       >
         Hea..
       </a>
@@ -95,7 +132,7 @@ exports[`<Toc/> renders properly with lowestHeadingLevel option 1`] = `
     <ul>
       <li>
         <a
-          href="#heading3"
+          href="#heading3?"
         >
           Hea..
         </a>
@@ -111,7 +148,7 @@ exports[`<Toc/> renders properly with titleLimit option 1`] = `
 >
   <li>
     <a
-      href="#heading1"
+      href="#heading1!?"
     >
       Hea..
     </a>
@@ -119,7 +156,7 @@ exports[`<Toc/> renders properly with titleLimit option 1`] = `
   <ul>
     <li>
       <a
-        href="#heading2"
+        href="#heading2!"
       >
         Hea..
       </a>
@@ -129,7 +166,7 @@ exports[`<Toc/> renders properly with titleLimit option 1`] = `
     <ul>
       <li>
         <a
-          href="#heading3"
+          href="#heading3?"
         >
           Hea..
         </a>
@@ -145,7 +182,7 @@ exports[`<Toc/> renders properly with type option 1`] = `
 >
   <li>
     <a
-      href="#heading1"
+      href="#heading1!?"
     >
       Hea..
     </a>
@@ -153,7 +190,7 @@ exports[`<Toc/> renders properly with type option 1`] = `
   <ul>
     <li>
       <a
-        href="#heading2"
+        href="#heading2!"
       >
         Hea..
       </a>
@@ -163,7 +200,7 @@ exports[`<Toc/> renders properly with type option 1`] = `
     <ul>
       <li>
         <a
-          href="#heading3"
+          href="#heading3?"
         >
           Hea..
         </a>

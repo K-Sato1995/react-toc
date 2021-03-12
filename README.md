@@ -53,6 +53,7 @@ export default Example;
 | `lowestHeadingLevel` | number            | The lowest level of headings you want to extract from the given markdownText. |
 | `className`          | strig             | Your custom className.                                                        |
 | `type`               | "deafult" or"raw" | The type of a TOC you want to use.                                            |
+| `customMatchers`     | { [key: string]: string } | The matchers you want to use to replace the letters with.             |
 
 ## CustomDesign
 
@@ -83,6 +84,42 @@ Now you can style your custom class just like the code below.
 .customClassName > li {
   padding-bottom: 10px;
 }
+```
+
+
+## Custom Matchers
+
+You can use the `customMatchers` prop to replace letters in your toc.
+For instance, if you want to replace `?` or `!` with `-` in your list, you can simply do this.
+
+```jsx
+import React from "react";
+import Toc from "react-toc";
+
+const Example = () => {
+  const yourMarkdownText = "# test \n your markdown Content # test2\n";
+  const matchers = { "[?!]": "-" }
+
+  return <Toc markdownText={yourMarkdownText} className={"customClassName"} customMatchers={matchers}/>;
+};
+
+export default Example;
+```
+
+You can also give more options to the `customMatchers` prop like the code below.
+
+```jsx
+import React from "react";
+import Toc from "react-toc";
+
+const Example = () => {
+  const yourMarkdownText = "# test \n your markdown Content # test2\n";
+  const matchers = { "[?!]": "-", "\\*": "" }
+
+  return <Toc markdownText={yourMarkdownText} className={"customClassName"} customMatchers={matchers}/>;
+};
+
+export default Example;
 ```
 
 ## License

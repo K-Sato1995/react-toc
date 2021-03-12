@@ -1,9 +1,33 @@
 import {
+  replaceAll,
   createLink,
   createTitle,
   extractHeadingsFromMd,
   removeCodeBlockFromMd,
 } from '../utils'
+
+describe('replaceAll', () => {
+  it("won't replace any string if the given macher is {}", () => {
+    expect(replaceAll('Test String', {})).toEqual('Test String')
+  })
+  it('replaces all letters based on the given customMatchers', () => {
+    expect(replaceAll('THIS ! IS TEST STRING!?', { '[?!]': '-' })).toEqual(
+      'THIS - IS TEST STRING--',
+    )
+    expect(
+      replaceAll('aaaeeeuuuuooooo', { a: 'z', e: 'y', u: 'w', o: 'x' }),
+    ).toEqual('zzzyyywwwwxxxxx')
+
+    expect(replaceAll('**ui**非依存', { '\\*': '' })).toEqual('ui非依存')
+
+    expect(
+      replaceAll('(ui/web/devices/db/external-interfaces)', {
+        '[\\(\\)]': '',
+        '/': '',
+      }),
+    ).toEqual('uiwebdevicesdbexternal-interfaces')
+  })
+})
 
 describe('createLink', () => {
   it("removes # and connects each word with '-'.", () => {
@@ -11,10 +35,6 @@ describe('createLink', () => {
     expect(createLink('## This is a test heading')).toEqual(
       'this-is-a-test-heading',
     )
-  })
-
-  it('replaces /!/? with -', () => {
-    expect(createLink('### Test?')).toEqual('test-')
   })
 })
 

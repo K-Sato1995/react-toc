@@ -38,6 +38,10 @@ type TocProps = {
     The type of a TOC you want to use.
   */
   type?: 'default' | 'raw' // "fixed-left" | "fixed-right" | "material" | "bootstrap"
+  /*
+    The custom options for the anchors
+  */
+  customMatchers?: CustomMatchers
 }
 
 const Toc = ({
@@ -47,6 +51,7 @@ const Toc = ({
   lowestHeadingLevel,
   className,
   type,
+  customMatchers,
 }: TocProps): JSX.Element | null => {
   if (!markdownText) return null
   // Set default values
@@ -68,7 +73,7 @@ const Toc = ({
     headingLevels[1],
   )
   const headingObjects = matchedHeadings?.map((heading) =>
-    newHeading(heading, limit),
+    newHeading(heading, limit, customMatchers),
   )
   const headingTags:
     | JSX.Element[]
