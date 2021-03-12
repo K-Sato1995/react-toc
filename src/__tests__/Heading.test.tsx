@@ -1,8 +1,22 @@
 import Heading, { newHeading } from '../Heading'
 import renderer from 'react-test-renderer'
 
+describe('Instantiate Heading', () => {
+  const createdObject = new Heading('## Test Heading?!  ', 5, 50, {
+    '[?!]': '-',
+  })
+  it('Create a new heading object from the given string', () => {
+    expect(createdObject).toEqual({
+      level: 5,
+      title: '## Test Heading?!  ',
+      titleLimit: 50,
+      customMatchers: { '[?!]': '-' },
+    })
+  })
+})
+
 describe('newHeading', () => {
-  const createdObject = newHeading('## Test Heading  ', 50)
+  const createdObject = newHeading('## Test Heading?!  ', 50, { '[?!]': '-' })
   it('Create a new heading object.', () => {
     expect(createdObject instanceof Heading).toBeTruthy()
   })
@@ -10,9 +24,9 @@ describe('newHeading', () => {
   it('Create a new heading object from the given string', () => {
     expect(createdObject).toEqual({
       level: 2,
-      title: '## Test Heading  ',
+      title: '## Test Heading?!  ',
       titleLimit: 50,
-      customMatchers: {},
+      customMatchers: { '[?!]': '-' },
     })
   })
 
