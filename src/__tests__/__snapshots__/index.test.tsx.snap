@@ -2,14 +2,14 @@
 
 exports[`<Toc/> renders properly 1`] = `
 <ul
-  className={undefined}
+  className="react-toc"
 >
   <li>
     <a
       href="#heading1!?"
     >
       Heading1!?
-      
+
     </a>
   </li>
   <ul>
@@ -18,7 +18,7 @@ exports[`<Toc/> renders properly 1`] = `
         href="#heading2!"
       >
         Heading2!
-        
+
       </a>
     </li>
   </ul>
@@ -29,7 +29,7 @@ exports[`<Toc/> renders properly 1`] = `
           href="#heading3?"
         >
           Heading3?
-          
+
         </a>
       </li>
     </ul>
@@ -80,7 +80,7 @@ exports[`<Toc/> renders properly with customMatchers option 1`] = `
       href="#heading1--"
     >
       Heading1!?
-      
+
     </a>
   </li>
   <ul>
@@ -89,7 +89,7 @@ exports[`<Toc/> renders properly with customMatchers option 1`] = `
         href="#heading2-"
       >
         Heading2!
-        
+
       </a>
     </li>
   </ul>
@@ -100,7 +100,7 @@ exports[`<Toc/> renders properly with customMatchers option 1`] = `
           href="#heading3-"
         >
           Heading3?
-          
+
         </a>
       </li>
     </ul>
@@ -110,7 +110,7 @@ exports[`<Toc/> renders properly with customMatchers option 1`] = `
 
 exports[`<Toc/> renders properly with lowestHeadingLevel option 1`] = `
 <ul
-  className={undefined}
+  className="react-toc"
 >
   <li>
     <a
@@ -144,7 +144,7 @@ exports[`<Toc/> renders properly with lowestHeadingLevel option 1`] = `
 
 exports[`<Toc/> renders properly with titleLimit option 1`] = `
 <ul
-  className={undefined}
+  className="react-toc"
 >
   <li>
     <a
