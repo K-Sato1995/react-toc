@@ -1,11 +1,11 @@
 module.exports = {
   transform: {
     "^.+\\.tsx?$": "ts-jest",
-    ".+\\.(css|styl|less|sass|scss)$": "jest-transform-css",
+    '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform'
   },
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   testPathIgnorePatterns: ["/lib/", "/node_modules/", "/dist/"],
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   testURL: "http://localhost/",
   coverageThreshold: {
     global: {
