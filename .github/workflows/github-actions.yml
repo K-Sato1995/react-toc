@@ -6,9 +6,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install modules
-        run: npm install
+        run: yarn
       - name: Run tests
-        run: npm run test
+        run: yarn run test
   eslint:
     runs-on: ubuntu-latest
     steps:
@@ -16,7 +16,7 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Run ESLint
-        run: npm run lint
+        run: yarn run lint
   create-release-on-github:
     name: Create Release
     runs-on: ubuntu-latest
