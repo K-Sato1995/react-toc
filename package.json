@@ -88,7 +88,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
-    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-postcss-modules": "^2.0.2",
     "rollup-plugin-typescript2": "^0.31.2",
     "rollup-plugin-url": "^3.0.1",
     "ts-jest": "^27.1.3",
