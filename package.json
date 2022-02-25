@@ -23,38 +23,6 @@
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
   },
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "ignorePatterns": [
-      "typings.d.ts"
-    ],
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:jest/recommended",
-      "plugin:prettier/recommended",
-      "plugin:react/recommended",
-      "prettier",
-      "prettier/react"
-    ],
-    "rules": {
-      "react/prop-types": "off",
-      "no-control-regex": 0,
-      "prettier/prettier": [
-        "error"
-      ]
-    }
-  },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all"
-  },
   "peerDependencies": {
     "prop-types": "^15.5.4",
     "react": "^15.0.0 || ^16.0.0",
@@ -69,16 +37,12 @@
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
     "babel-runtime": "^6.26.0",
-    "cross-env": "^7.0.2",
     "eslint": "^8.9.0",
-    "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-jest": "^26.1.1",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.21.5",
     "gh-pages": "^3.1.0",
     "jest": "^27.5.1",
     "jest-css-modules-transform": "^4.3.0",
-    "prettier": "^2.2.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts-ts": "^3.1.0",

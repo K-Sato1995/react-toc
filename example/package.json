@@ -18,7 +18,7 @@
     "react-markdown": "^4.3.1",
     "react-scripts": "^3.4.1",
     "react-syntax-highlighter": "^12.2.1",
-    "react-toc": "link:..",
+    "react-toc": "/Users/katsuki/WorkSpace/TypeScript/react-toc",
     "styled-components": "^5.1.1",
     "typescript": "^3.9.6"
   },
