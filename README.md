@@ -1,13 +1,13 @@
 # react-toc
 
-[![NPM](https://img.shields.io/npm/v/react-toc.svg)](https://www.npmjs.com/package/react-toc) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-toc.svg)](https://www.npmjs.com/package/react-toc)![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-toc)
 [![K-Sato1995](https://circleci.com/gh/K-Sato1995/react-toc.svg?style=shield)](https://app.circleci.com/pipelines/github/K-Sato1995/react-toc?branch=master)
 
 ## Overview
 
-The idea is that you can automatically create a customizable table of contents from your markdown text.
+- The idea is that you can automatically create a customizable table of contents from your markdown text.
+- It's regex based. Thus, managed to keep the bundle size pretty tiny.(Check it out at [BUNDLEPHOBIA](https://bundlephobia.com/package/react-toc))
 
-PRs/Issues are always welcome.
 
 [![Image from Gyazo](https://i.gyazo.com/ad08e03a28d3cda2073e02da63cf180f.gif)](https://gyazo.com/ad08e03a28d3cda2073e02da63cf180f)
 
