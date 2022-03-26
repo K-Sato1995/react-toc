@@ -14,7 +14,6 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/jest --config ./jest.config.js",
-    "test:watch": "react-scripts-ts test --env=jsdom",
     "lint": "eslint --ext=ts,tsx src",
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
     "build": "rollup -c",
@@ -45,7 +44,6 @@
     "jest-css-modules-transform": "^4.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts-ts": "^3.1.0",
     "react-test-renderer": "^17.0.2",
     "rollup": "^2.70.1",
     "rollup-plugin-babel": "^4.4.0",
