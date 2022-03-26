@@ -122,6 +122,33 @@ const Example = () => {
 export default Example;
 ```
 
+
+## Development
+
+- Install dev dependencies.
+
+```
+$ yarn install
+```
+
+- Test
+
+```
+$ yarn test
+```
+
+- Lint
+
+```
+$ yarn lint
+```
+
+- Run example locally
+
+```
+$ yarn run build && cd example && yarn && yarn start
+```
+
 ## License
 
 [MIT](https://github.com/K-Sato1995/react-toc/blob/master/LICENSE)
