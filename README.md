@@ -1,10 +1,13 @@
 
 ![react-toc](https://user-images.githubusercontent.com/32632542/172038318-d2ff8b26-27f0-4694-9b55-17cfccb9fc7e.png)
 
+<div align='center'>
+
 [![NPM](https://img.shields.io/npm/v/react-toc.svg)](https://www.npmjs.com/package/react-toc)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-toc?color=%2355C503)
 ![npm](https://img.shields.io/npm/dw/react-toc?color=%23C43737)
 ![MIT](https://img.shields.io/github/license/K-Sato1995/react-toc?color=%23F6F623)
+</div>
 
 ## Overview
 
