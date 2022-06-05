@@ -1,0 +1,9 @@
+.top-container {
+    height: 500px;
+    background: rgb(2,0,36);
+    background: linear-gradient(to bottom right,rgba(123,116,255,1) 00%, rgba(127,233,255,1) 50%, #fff 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #E5E7EB;
+}
