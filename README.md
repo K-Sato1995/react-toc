@@ -143,10 +143,10 @@ $ yarn test
 $ yarn lint
 ```
 
-- Run example locally
+- Run demo locally
 
 ```
-$ yarn run build && cd example && yarn && yarn start
+$ cd demo && yarn && yarn start
 ```
 
 ## License
