@@ -1,7 +1,6 @@
 # react-toc
 
-[![NPM](https://img.shields.io/npm/v/react-toc.svg)](https://www.npmjs.com/package/react-toc)![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-toc)
-[![K-Sato1995](https://circleci.com/gh/K-Sato1995/react-toc.svg?style=shield)](https://app.circleci.com/pipelines/github/K-Sato1995/react-toc?branch=master)
+[![NPM](https://img.shields.io/npm/v/react-toc.svg)](https://www.npmjs.com/package/react-toc)![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-toc?color=%2355C503)![npm](https://img.shields.io/npm/dw/react-toc?color=%23C43737)![MIT](https://img.shields.io/github/license/K-Sato1995/react-toc?color=%23F6F623)
 
 ## Overview
 
