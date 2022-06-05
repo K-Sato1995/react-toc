@@ -1,4 +1,5 @@
-# react-toc
+
+![react-toc](https://user-images.githubusercontent.com/32632542/172038318-d2ff8b26-27f0-4694-9b55-17cfccb9fc7e.png)
 
 [![NPM](https://img.shields.io/npm/v/react-toc.svg)](https://www.npmjs.com/package/react-toc)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-toc?color=%2355C503)
