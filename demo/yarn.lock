@@ -7927,8 +7927,10 @@ react-syntax-highlighter@^15.5.0:
     prismjs "^1.27.0"
     refractor "^3.6.0"
 
-"react-toc@file:..":
-  version "2.1.0"
+react-toc@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-toc/-/react-toc-3.0.0.tgz#679360ed1c0eea057a27187881b7c2c0c0498586"
+  integrity sha512-5wlAa3JrOLZ5327/a8CLvxWYLXlVz70jrL1g8fJ6lZTP2nW5154yVDiQCqcyElj/f6NOx9ZJasx7KXZfiKxXRw==
 
 react@^18.1.0:
   version "18.1.0"
