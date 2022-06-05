@@ -4,7 +4,7 @@ module.exports = {
     ".+\\.(css|styl|less|sass|scss)$": "jest-css-modules-transform",
   },
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-  testPathIgnorePatterns: ["/lib/", "/node_modules/", "/dist/"],
+  testPathIgnorePatterns: ["/lib/", "/node_modules/", "/dist/", "/demo/"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   testURL: "http://localhost/",
   coverageThreshold: {

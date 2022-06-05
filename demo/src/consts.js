@@ -32,12 +32,13 @@ import React from "react";
 import Toc from "react-toc";
 
 const Example = () => {
-const yourMarkdownText = '# test \n your markdown Content # test2\n'
+const yourMarkdownText = '# test  your markdown Content # test2'
 return <Toc markdownText={yourMarkdownText} />
 };
 
 export default Example;
 \`\`\`
+
 
 # Props
 
@@ -61,7 +62,7 @@ import React from "react";
 import Toc from "react-toc";
 
 const Example = () => {
-const yourMarkdownText = '# test \n your markdown Content # test2\n'
+const yourMarkdownText = '# test  your markdown Content # test2'
 return <Toc markdownText={yourMarkdownText} className={"customClassName"}/>
 };
 
@@ -91,7 +92,7 @@ import React from "react";
 import Toc from "react-toc";
 
 const Example = () => {
-  const yourMarkdownText = "# test \n your markdown Content # test2\n";
+  const yourMarkdownText = "# test  your markdown Content # test2";
   const matchers = { "[?!]": "-" }
 
   return <Toc markdownText={yourMarkdownText} className={"customClassName"} customMatchers={matchers}/>;
@@ -107,7 +108,7 @@ import React from "react";
 import Toc from "react-toc";
 
 const Example = () => {
-  const yourMarkdownText = "# test \n your markdown Content # test2\n";
+  const yourMarkdownText = "# test  your markdown Content # test2";
   const matchers = { "[?!]": "-", "\\*": "" }
 
   return <Toc markdownText={yourMarkdownText} className={"customClassName"} customMatchers={matchers}/>;

@@ -1,0 +1,18 @@
+.bottom-container {
+    height: 300px;
+    /* border-top: solid 1px #E5E7EB; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.link {
+    color: #565656;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.link:hover {
+    color: #7B74FF;
+}

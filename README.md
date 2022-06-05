@@ -9,7 +9,7 @@
 - It's regex based. Thus, managed to keep the bundle size pretty tiny.(Check it out at [BUNDLEPHOBIA](https://bundlephobia.com/package/react-toc))
 
 
-[![Image from Gyazo](https://i.gyazo.com/ad08e03a28d3cda2073e02da63cf180f.gif)](https://gyazo.com/ad08e03a28d3cda2073e02da63cf180f)
+[![Image from Gyazo](https://i.gyazo.com/3e63575305ea5c12e1d52b73a96cdfaa.gif)](https://gyazo.com/3e63575305ea5c12e1d52b73a96cdfaa)
 
 ### Demo
 
