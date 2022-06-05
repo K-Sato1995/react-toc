@@ -13,7 +13,7 @@
 
 ### Demo
 
-[Check out the demo page.](https://k-sato1995.github.io/react-toc/)
+[Check out the demo page.](https://react-toc-k-sato1995.vercel.app/)
 
 ## Installation
 
