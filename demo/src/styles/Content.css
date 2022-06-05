@@ -1,0 +1,115 @@
+.content-container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    /* border: solid 1px #E5E7EB; */
+    border-radius: 5px;
+}
+
+.content-container h1 {
+    border-bottom: solid 1px #E5E7EB;
+    padding-bottom: 0.3rem;
+}
+
+.content-container h2 {
+    color: #3C4257;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin:0;
+    padding:0;
+    width: 100%;
+}
+
+table tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+.toc {
+    padding-left: 1.5rem;
+}
+
+.toc > li,
+.toc > ul > li,
+.toc > ul > ul > li,
+.toc > ul > ul > ul > li,
+.toc > ul > ul > ul > ul > li,
+.toc > ul > ul > ul > ul > ul > li {
+  padding-bottom: 10px;
+}
+
+.toc > li > a,
+.toc > ul > li > a,
+.toc > ul > ul > li > a,
+.toc > ul > ul > ul > li > a,
+.toc > ul > ul > ul > ul > li > a,
+.toc > ul > ul > ul > ul > ul > li > a {
+    color: #565656;
+  text-decoration: none;
+}
+
+.toc > li > a:hover,
+.toc > ul > li > a:hover,
+.toc > ul > ul > li > a:hover,
+.toc > ul > ul > ul > li > a:hover,
+.toc > ul > ul > ul > ul > li > a:hover,
+.toc > ul > ul > ul > ul > ul > li > a:hover {
+  color: #7B74FF;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+    table thead {
+        display: none;
+    }
+    table tr {
+        border-bottom: 2px solid #ddd;
+        display: block;
+        margin-bottom: 10px;
+    }
+    table td {
+        border-bottom: 1px dotted #ccc;
+        display: block;
+        font-size: 13px;
+        text-align: left;
+    }
+    table td:last-child {
+        border-bottom: 0;
+    }
+    table td:before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    background-color: #1E1E1E;
+    color: #f8f8f2;
+    border-radius: 0.3em;
+    padding: 0 4px;
+    white-space: nowrap;
+}

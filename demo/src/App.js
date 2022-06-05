@@ -1,18 +1,14 @@
-import './styles/App.css';
 import React from "react";
 import Top from './components/Top'
-import Toc from "react-toc";
-
-const Example = () => {
-  const yourMarkdownText = "# test \n your markdown Content # test2\n";
-  return <Toc markdownText={yourMarkdownText} />;
-};
+import Content from './components/Content';
+import Bottom from "./components/Bottom";
 
 function App() {
   return (
     <div className="App">
         <Top />
-        <Example />
+        <Content />
+        <Bottom />
     </div>
   );
 }
