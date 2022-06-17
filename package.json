@@ -39,7 +39,6 @@
     "eslint": "^8.17.0",
     "eslint-plugin-jest": "^26.5.0",
     "eslint-plugin-react": "^7.30.0",
-    "gh-pages": "^4.0.0",
     "jest": "^28.1.0",
     "jest-css-modules-transform": "^4.4.2",
     "react": "^18.1.0",
