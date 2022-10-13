@@ -6,7 +6,9 @@ module.exports = {
   testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   testPathIgnorePatterns: ["/lib/", "/node_modules/", "/dist/", "/demo/"],
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
-  testURL: "http://localhost/",
+  testEnvironmentOptions: {
+    url: "http://localhost/"
+  },
   coverageThreshold: {
     global: {
       branches: 50,
