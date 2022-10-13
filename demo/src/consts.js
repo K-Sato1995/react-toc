@@ -47,7 +47,7 @@ export default Example;
 | \`markdownText\`       | string            | **Required** The markdown text you want to creat a TOC from.                   |
 | \`titleLimit\`         | number            | The maximum length of each title in the TOC.                                  |
 | \`lowestHeadingLevel\` | number            | The lowest level of headings you want to extract from the given markdownText. |
-| \`className\`          | strig             | Your custom className.                                                        |
+| \`className\`          | string            | Your custom className.                                                        |
 | \`type\`               | "deafult" or"raw" | The type of a TOC you want to use.                                            |
 | \`customMatchers\`     | { [key: string]: string } | The matchers you want to use to replace the letters with.             |
 
