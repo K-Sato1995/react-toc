@@ -8032,10 +8032,10 @@ react-syntax-highlighter@^15.5.0:
     prismjs "^1.27.0"
     refractor "^3.6.0"
 
-react-toc@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-toc/-/react-toc-3.0.0.tgz#679360ed1c0eea057a27187881b7c2c0c0498586"
-  integrity sha512-5wlAa3JrOLZ5327/a8CLvxWYLXlVz70jrL1g8fJ6lZTP2nW5154yVDiQCqcyElj/f6NOx9ZJasx7KXZfiKxXRw==
+react-toc@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-toc/-/react-toc-3.1.0.tgz#9914189b5932f4f79c0c29df9bd72ed4d1883afa"
+  integrity sha512-JPvMScVqu8NuguplaM74lerkXVh4ASnnF6vrjUoHS0fTxOsNrLJEagwdfTXopY3iBMAuOFx9pOwuRYi8UfL4wQ==
 
 react@^18.2.0:
   version "18.2.0"
