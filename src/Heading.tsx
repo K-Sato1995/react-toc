@@ -23,7 +23,12 @@ export default class Heading {
     const link = createLink(this.title)
     const listItem = (
       <li>
-        <a href={`#${replaceAll(link, this.customMatchers)}`}>
+        <a href={`#${replaceAll(link, this.customMatchers)}`} onClick={(e) => {
+            e.preventDefault();
+            document.querySelector(`#${replaceAll(link, this.customMatchers)}`).scrollIntoView({
+              behavior: "smooth"
+            });
+          }}>
           {createTitle(this.title, this.titleLimit)}
         </a>
       </li>
