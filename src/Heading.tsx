@@ -25,6 +25,7 @@ export default class Heading {
       <li>
         <a href={`#${replaceAll(link, this.customMatchers)}`} onClick={(e) => {
             e.preventDefault();
+            // @ts-ignore
             document.querySelector(`#${replaceAll(link, this.customMatchers)}`).scrollIntoView({
               behavior: "smooth"
             });

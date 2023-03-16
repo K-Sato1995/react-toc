@@ -1,10 +1,13 @@
 {
-  "name": "react-toc",
-  "version": "3.1.0",
+  "name": "react-toc2",
+  "version": "3.1.1",
   "description": "Create a table of contents from the given markdown text.",
   "author": "K-Sato1995",
   "license": "MIT",
-  "repository": "K-Sato1995/react-toc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/K-Sato1995/react-toc.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -13,7 +16,7 @@
     "npm": ">=5"
   },
   "scripts": {
-    "test": "./node_modules/.bin/jest --config ./jest.config.js",
+    "test": "jest --config ./jest.config.js",
     "lint": "eslint --ext=ts,tsx src",
     "lint:fix": "eslint --fix --ext .ts,.tsx src",
     "build": "rollup -c",
@@ -57,5 +60,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/K-Sato1995/react-toc/issues"
+  },
+  "homepage": "https://github.com/K-Sato1995/react-toc#readme"
 }
