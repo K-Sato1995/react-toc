@@ -19,11 +19,20 @@ export default class Heading {
     this.customMatchers = customMatchers ? customMatchers : {}
   }
 
-  generateList(): JSX.Element {
+  generateList(headingHighlight: string): JSX.Element {
     const link = createLink(this.title)
+    const id = replaceAll(link, this.customMatchers)
+    console.log(id);
+    console.log(headingHighlight);
+    let styles = {};
+    if(headingHighlight === id){
+      styles = {
+        fontWeight: 'bold',
+      }
+    }
     const listItem = (
       <li>
-        <a href={`#${replaceAll(link, this.customMatchers)}`}>
+        <a href={`#${id}`} style={styles}>
           {createTitle(this.title, this.titleLimit)}
         </a>
       </li>

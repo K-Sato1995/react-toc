@@ -1,10 +1,10 @@
 {
   "name": "react-toc",
-  "version": "3.1.0",
+  "version": "1.0.0",
   "description": "Create a table of contents from the given markdown text.",
-  "author": "K-Sato1995",
+  "author": "sak1sham",
   "license": "MIT",
-  "repository": "K-Sato1995/react-toc",
+  "repository": "sak1sham/react-toc-highlight",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",

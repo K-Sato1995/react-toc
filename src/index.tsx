@@ -42,6 +42,10 @@ type TocProps = {
     The custom options for the anchors
   */
   customMatchers?: CustomMatchers
+  /*
+    Adding Highlights to List Items
+  */
+  highlightId?: string
 }
 
 const Toc = ({
@@ -52,6 +56,7 @@ const Toc = ({
   className,
   type,
   customMatchers,
+  highlightId
 }: TocProps): JSX.Element | null => {
   if (!markdownText) return null
   // Set default values
@@ -62,6 +67,7 @@ const Toc = ({
     highestHeadingLevel || 1,
     lowestHeadingLevel || 6,
   ]
+  const headingHighlight = highlightId || "";
 
   // Style settings
   const style: string | undefined = styles[customClass] || className
@@ -78,7 +84,7 @@ const Toc = ({
   const headingTags:
     | JSX.Element[]
     | undefined = headingObjects?.map((heading: Heading) =>
-    heading.generateList(),
+    heading.generateList(headingHighlight),
   )
 
   if (!headingTags) return null
