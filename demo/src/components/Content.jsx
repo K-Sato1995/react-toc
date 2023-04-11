@@ -1,7 +1,7 @@
 import '../styles/Content.css';
 import React from "react";
 import { CONTENT as mdContent } from '../consts'
-import Toc from "react-toc-highlight";
+import Toc from "@sak1sham/react-toc-highlight";
 import remarkGfm from 'remark-gfm'
 import ReactMarkdown from 'react-markdown'
 
@@ -29,7 +29,7 @@ const Content = () => {
     return (
         <div className='content-container'>
             <h1>Table of contents</h1>
-            <Toc markdownText={mdContent}  className={"toc"}/>
+            <Toc markdownText={mdContent}  className={"toc"} highlightId='overview'/>
 
             <ReactMarkdown
                 children={mdContent}
